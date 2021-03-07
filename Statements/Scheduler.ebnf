@@ -3,7 +3,7 @@ Scheduler ::= CREATE SCHEDULER JOB (schema_name.)? job_name
   (job_recurrence_range)?
    (ENABLE | DISABLE )? PROCEDURE ( schema_name.)?procedure_name ( PARAMETERS parameter_list )? NAME "=" CONST_EXPR ("," NAME "=" CONST_EXPR )?* 
 
-cron ::= year" "month" "date" "weekday" "hour" "minute" "seconds 
+cron ::= year " " month " " date " " weekday " " hour " " minute " " seconds 
 
 job_recurrence_range ::= ( FROM start_time )? ( UNTIL end_time )?
 
