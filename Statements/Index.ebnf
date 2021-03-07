@@ -1,0 +1,29 @@
+Index ::= CREATE ( index_type )? INDEX index_name ON table_name
+   ( column_name_order_entry ) ("," column_name_order_entry)?* 
+   ( global_index_order ) 
+   ( fillfactor )? 
+   ( NOWAIT )?
+   ( ONLINE )?  
+   ( load_unit )?
+
+column_name_order_entry ::= column_name ( column_order )?
+
+column_order ::= ( ASC | DESC )
+
+
+index_type ::=  UNIQUE 
+ | ( UNIQUE )? rs_tree_type_index 
+ | ( UNIQUE )? cs_inverted_type_index
+
+
+rs_tree_type_index ::= ( BTREE | CPBTREE )
+
+cs_inverted_type_index ::= INVERTED ( HASH | VALUE | INDIVIDUAL )
+
+
+global_index_order ::= ( ASC | DESC )
+
+
+fillfactor ::= FILLFACTOR unsigned_integer
+
+load_unit ::= ( COLUMN | PAGE ) LOADABLE
