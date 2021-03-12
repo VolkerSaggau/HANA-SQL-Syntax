@@ -1,0 +1,11 @@
+Trigger ::= CREATE ( OR REPLACE )? TRIGGER trigger_name trigger_action_time trigger_event_list
+   ON subject_table_name
+   ( REFERENCING transition_list )? 
+   ( for_each )? 
+   ( trigger_order_clause )?
+   ( ONLINE )?
+      BEGIN 
+         ( trigger_decl_list )?
+         ( proc_handler_list )?
+         trigger_stmt_list
+      END
